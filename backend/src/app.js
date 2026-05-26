@@ -11,9 +11,4 @@ app.use('/api/convert/pdf',router)
 app.use('/api/merge/pdf',router)
 
 
-app.get('/',(req,res)=>{
-    res.send("hello   from server");
-})
-
-
 module.exports=app;
