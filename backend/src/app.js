@@ -7,8 +7,8 @@ const app=express();
 
 app.use(cors())
 app.use(express.json())
-app.use('/api/pdf',router)
-app.use('/api/pdf/merge',router)
+app.use('/api/convert/pdf',router)
+app.use('/api/merge/pdf',router)
 
 
 app.get('/',(req,res)=>{

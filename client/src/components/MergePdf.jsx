@@ -30,7 +30,7 @@ const MergePdf=()=> {
     try {
 
       const response = await axios.post(
-        "http://10.225.84.71:5001/merge",
+        "http://localhost:3000/api/merge/pdf/merge",
         formData,
         {
           responseType: "blob",

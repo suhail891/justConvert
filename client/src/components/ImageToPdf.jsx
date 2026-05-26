@@ -31,7 +31,7 @@ const ImageToPdf=()=> {
     try {
 
       const response = await axios.post(
-        "http://localhost:3000/api/pdf/image-to-pdf",
+        "http://localhost:3000/api/convert/pdf/image-to-pdf",
         formData,
         {
           responseType: "blob",

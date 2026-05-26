@@ -1,4 +1,4 @@
-const pdfMergeService = require('../services/pdfMerge.Service');
+const {mergePdfService} = require('../services/pdfMerge.Service');
 const path=require('path')
 
 const mergePdfController = async (req, res) => {
@@ -6,8 +6,10 @@ const mergePdfController = async (req, res) => {
         //yha pr mai path generate krunga jaha pr mai file save krunga
         const filesPath = req.files.map(file => file.path);
         const outputPath = `temp/output-${Date.now()}.pdf`;
-        const mergedpdf= await pdfMergeService(filesPath,outputPath);
+        const mergedpdf= await mergePdfService(filesPath,outputPath);
         console.log("files are merged success fully")
+       // res.sendFile(mergedpdf,{ root: '.' }, );
+       res.download(mergedpdf)
 
     }catch(err){
         console.log("error in pdf merging");

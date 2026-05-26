@@ -47,3 +47,6 @@ const App = () => {
 
 export default App
 
+// git remote add origin https://github.com/suhail891/justConvert.git
+// git branch -M main
+// git push -u origin main

@@ -1,4 +1,4 @@
-const {imageToPfdService}=require('../services/pdfService');
+const {imageToPfdService}=require('../services/imageToPdfService');
 
 
 const imageToPdfController=async (req,res)=>{
@@ -13,8 +13,8 @@ const imageToPdfController=async (req,res)=>{
 
     const pdf = await imageToPfdService(filePath, outputPath);
     console.log("download pdf is running succesfully")
-   // res.download(pdf)
-   res.sendFile(pdf,{ root: '.' }, );
+   res.download(pdf)
+//    res.sendFile(pdf,{ root: '.' }, );
 }
 
 module.exports={
